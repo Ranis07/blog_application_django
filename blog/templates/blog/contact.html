@@ -1,0 +1,20 @@
+{% extends "blog/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+	<div class="content-section">
+		<form method="POST">
+			{% csrf_token %}
+			<fieldset class="form-group">
+				<legend class="border-bottom mb-4">Contact Us</legend>
+				<p>Use the form below to get in touch about any questions or comments you might have – we’ll reply as quickly as we possibly can. If you would like to talk to us about CampusPress, partnering with Eblogs or make a media inquiry, please use the form below:</p><br>
+				{{contact_form|crispy}}
+			</fieldset>
+			<div class="form-group">
+				<button class="btn btn-outline-info" type="submit">Send</button>
+			</div><br>
+			<p><b>Or Email Directly:</b> Should you have any problems with the form above, or if we don’t get back to you (there may have been a typo in your email address) you can also email us directly at support@eblogs.org.</p>
+		</form>
+	</div>
+
+{% endblock %}

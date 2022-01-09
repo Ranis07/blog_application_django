@@ -1,0 +1,15 @@
+{% extends "blog/base.html" %}
+{% block content %}
+
+	<h1>About Us</h1>
+	{% for post in posts_about %}
+		{{post.content}}
+	{% endfor %}
+
+	<p><b><br>Features you will get:</b></p>
+	<li>You will get easy-to-remember and short URL such as https://www.eblogs.in/yourname</li>
+	<li>Easy-to-use blogging platform</li>
+	<li>No limitations on bandwidth</li>
+	<li>Private Messaging System to connect with the co-bloggers</li>
+
+{% endblock %}
